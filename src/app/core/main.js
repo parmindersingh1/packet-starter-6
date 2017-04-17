@@ -13,8 +13,8 @@ function ($rootScope, $state, $stateParams) {
     // set below basic information
     $rootScope.app = {
         name: 'Packet', // name of your project
-        author: 'ClipTheme', // author's name or company name
-        description: 'Angular Bootstrap Admin Template', // brief description
+        author: 'Parminder Singh', // author's name or company name
+        description: 'Packet', // brief description
         version: '1.0', // current version
         year: ((new Date()).getFullYear()), // automatic current year (for copyright information)
         isMobile: (function () {// true if the browser is a mobile device
@@ -86,6 +86,15 @@ app.config(['$localStorageProvider',
     function ($localStorageProvider) {
         $localStorageProvider.setKeyPrefix('PacketLtr6');
     }]);
+
+app.config(function(toastrConfig) {
+    angular.extend(toastrConfig, {       
+        positionClass: 'toast-top-right',
+        
+        timeOut: 4000
+      });
+});
+
 //filter to convert html to plain text
 app.filter('htmlToPlaintext', function () {
       return function (text) {

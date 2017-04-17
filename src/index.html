@@ -31,7 +31,7 @@
     <!-- Angular ui-switch Css -->
     <link rel="stylesheet" href="bower_components/angular-ui-switch/angular-ui-switch.min.css">
     <!-- Angular Toaster Css -->
-    <link rel="stylesheet" href="bower_components/AngularJS-Toaster/toaster.css">
+    <link rel="stylesheet" href="bower_components/angular-toastr/dist/angular-toastr.min.css">
     <!-- Angular Ng-Aside Css -->
     <link rel="stylesheet" href="bower_components/angular-aside/dist/css/angular-aside.min.css">
     <!-- Angular Notification Icons Css -->
@@ -49,6 +49,7 @@
     <!-- Slick Carousel Css -->
     <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick.css">
     <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick-theme.css">
+    
     <!-- Packet CSS -->
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/plugins.css">
@@ -118,7 +119,7 @@
     <!-- Angular ui-switch -->
     <script src="bower_components/angular-ui-switch/angular-ui-switch.min.js"></script>
     <!-- Angular Toaster -->
-    <script src="bower_components/AngularJS-Toaster/toaster.js"></script>
+    <script src="bower_components/angular-toastr/dist/angular-toastr.tpls.js"></script>
     <!-- Angular Ng-Aside -->
     <script src="bower_components/angular-aside/dist/js/angular-aside.min.js"></script>
     <!-- V-Accordion -->
@@ -135,32 +136,72 @@
     <script src="bower_components/angular-ladda/dist/angular-ladda.min.js"></script>
     <!-- Angular Slick Carousel -->
     <script src="bower_components/angular-slick-carousel/dist/angular-slick.min.js"></script>
+    
+    <script src="bower_components/lodash/lodash.js"></script>
     <!-- Packet Scripts -->
-    <script src="js/app.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/config.constant.js"></script>
-    <script src="js/config.router.js"></script>
-    <!-- Packet Directives -->
-    <script src="js/directives/toggle.js"></script>
-    <script src="js/directives/perfect-scrollbar.js"></script>
-    <script src="js/directives/empty-links.js"></script>
-    <script src="js/directives/sidebars.js"></script>
-    <script src="js/directives/off-click.js"></script>
-    <script src="js/directives/full-height.js"></script>
-    <script src="js/directives/panel-tools.js"></script>
-    <script src="js/directives/char-limit.js"></script>
-    <script src="js/directives/dismiss.js"></script>
-    <script src="js/directives/compare-to.js"></script>
-    <script src="js/directives/select.js"></script>
-    <script src="js/directives/messages.js"></script>
-    <script src="js/directives/chat.js"></script>
-    <script src="js/directives/touchspin.js"></script>
-    <script src="js/directives/file-upload.js"></script>
-    <script src="js/directives/letter-icon.js"></script>
-    <script src="js/directives/landing-header.js"></script>
-    <!-- Packet Controllers -->
-    <script src="js/controllers/mainCtrl.js"></script>
-    <script src="js/controllers/inboxCtrl.js"></script>
-    <script src="js/controllers/bootstrapCtrl.js"></script>
+    <script src="app/env.js"></script>
+    <script src="app/core/main.js"></script>
+
+    <!-- Modules -->
+    <script src="app/app.module.js"></script> 
+    <script src="app/logger/logger.module.js"></script>
+    <script src="app/router/router.module.js"></script>   
+    <script src="app/core/core.module.js"></script>
+    <script src="app/auth/auth.module.js"></script> 
+    <script src="app/layout/layout.module.js"></script>
+    <script src="app/project/project.module.js"></script>
+    
+
+    <script src="app/router/router-helper.provider.js"></script>
+    <script src="app/logger/logger.js"></script>
+
+    <script src="app/core/config.js"></script>
+    <script src="app/core/config.constant.js"></script>
+    <script src="app/core/mainCtrl.js"></script>
+    
+    <script src="app/core/constants.js"></script>
+    <script src="app/core/init.controller.js"></script>
+
+    <script src="app/project/project.route.js"></script>
+    <script src="app/project/dashboard/dashboard.controller.js"></script>
+    <script src="app/project/dashboard/dashboard.service.js"></script>
+
+    <script src="app/layout/layout.route.js"></script>
+
+    <script src="app/auth/auth.route.js"></script>
+    <script src="app/auth/authorization.service.js"></script> 
+    <script src="app/auth/principal.service.js"></script>
+    <script src="app/auth/validationHelperFactory.js"></script>    
+    <script src="app/auth/signin.controller.js"></script>
+    <script src="app/auth/registration.controller.js"></script>
+    <script src="app/auth/signout.controller.js"></script>
+    <script src="app/auth/forgot.controller.js"></script>
+    <script src="app/auth/registration.service.js"></script>
+    <script src="app/auth/role.service.js"></script>
+    <script src="app/auth/forgot.service.js"></script>
+  
+    
+   
+    <!-- Directives -->
+    <script src="app/directives/toggle.js"></script>
+    <script src="app/directives/perfect-scrollbar.js"></script>
+    <script src="app/directives/empty-links.js"></script>
+    <script src="app/directives/sidebars.js"></script>
+    <script src="app/directives/off-click.js"></script>
+    <script src="app/directives/full-height.js"></script>
+    <script src="app/directives/panel-tools.js"></script>
+    <script src="app/directives/char-limit.js"></script>
+    <script src="app/directives/dismiss.js"></script>
+    <script src="app/directives/compare-to.js"></script>
+    <script src="app/directives/select.js"></script>
+    <script src="app/directives/messages.js"></script>
+    <script src="app/directives/chat.js"></script>
+    <script src="app/directives/touchspin.js"></script>
+    <script src="app/directives/file-upload.js"></script>
+    <script src="app/directives/letter-icon.js"></script>
+    <script src="app/directives/landing-header.js"></script>
+    
+    
+  
 </body>
 </html>
